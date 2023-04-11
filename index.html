@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main>
+        <section class="glass">
+            <div class="selector">
+                    <button onclick="open_percentage()" class="select" style="border-radius: 30% 0 0 30%;">Percentage</button>
+                    <button onclick="open_cgpa()" class="select">CGPA</button>
+                    <button onclick="open_sgpa()" class="select" style="border-radius: 0 40% 40% 0;">SGPA</button>
+            </div>
+            <div class="main">
+                <div id="percent">
+                    <h4>Enter your Percentage to get its value in CGPA and SGPA</h4><br>
+                    <input type="number" placeholder="%" id="percentage_value" max="100"><br>
+                    <ul>
+                        <li>CGPA : </li><li id="in_cgpa"> --- </li><br>
+                        <li>SGPA : </li><li id="in_sgpa"> --- </li><br>
+                    </ul>
+                </div>
+                <div id="cgpa" >
+                    <h4>Enter your CGPA to get its value in Percentage and SGPA</h4><br>
+                    <input type="text" placeholder="%" id="cgpa_value"><br>
+                    <ul>
+                        <li>Percentage : </li><li id="in_percent"> --- </li><br>
+                        <li>SGPA : </li><li id="in_sgpa2"> --- </li><br>
+                    </ul>
+                </div>
+                <div id="sgpa">
+                    <h4>Enter your SGPA to get its value in CGPA and Percentage</h4><br>
+                    <input type="text" placeholder="%" id="sgpa_value"><br>
+                    <ul>
+                        <li>CGPA : </li><li id="in_cgpa2"> --- </li><br>
+                        <li>Percentage : </li><li id="in_percent2"> --- </li><br>
+                    </ul>
+                </div>
+                <div class="extra">
+                    <div id="percent_ex">
+                        <h2>Percentage Conversion</h2>
+                        Here are the steps to convert percentage to CGPA: <br>
+                        1. First, divide the percentage value by 9.5. <br>
+                        2. Applying the formula: (Percentage Value / 9.5) = Final Value (CGPA).
+                        For example, if your percentage is 85.5, then your CGPA would be 85.5 / 9.5 = 9.
+                        <br><br>
+                        Here are the steps to convert percentage to SGPA: <br>
+                        1. First, divide the percentage value by 10 and then add 0.75 with it1. <br>
+                        2. Applying the formula: (Percentage Value / 10) + 0.75 = Final Value (SGPA)1.
+                        For example, if your percentage is 85.5, then your SGPA would be (85.5 / 10) + 0.75 = 9.31.
+                    </div>
+                    <div id="cgpa_ex">
+                        <h2>CGPA Conversion</h2>
+                    </div>
+                    <div id="sgpa_ex"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+</body>
+<script src="logic.js"></script>
+</html>
